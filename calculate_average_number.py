@@ -20,3 +20,16 @@ def calculate_average_number():
             # Shield on! Pag nag-type ng letter, stop na sa paghingi para makapag-compute.
             print("\033[93mInvalid input detected. Calculating average...\033[0m")
             break
+    # I-check muna kung may nakuha ba talagang numbers (kung higit sa zero ang count)
+    # TANDAAN: Siguraduhing pantay ang 'if' na ito sa 'while' na nasa taas!
+    if number_count > 0:
+        # Compute the average: Divide ang total sum sa kung ilang numbers ang tinype
+        average_result = total_sum / number_count
+        print("\033[92mThe average is:\033[0m", average_result)
+    else:
+        # Kung nag-letter agad sa umpisa pa lang kaya walang nai-compute:
+        print("\033[91mNo valid numbers were entered.\033[0m")
+
+# Ito yung magsisilbing switch para umandar yung buong script
+if __name__ == "__main__":
+    calculate_average_number()
